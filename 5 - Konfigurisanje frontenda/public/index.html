@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>CATalyzator</title>
+    <link rel="icon" type="image/png" href="resources/favicon.png" />
+    <link rel="stylesheet" href="style.css">
+  </head>
+
+  <body onload='loadCats()'>
+    <header class="header">CATalyzator</header>
+    <div class="text">This is the inventory of all my Kitty-Cats</div>
+    <div class="main-content">
+      <div class="contentArea">
+        <table class="catsTable">
+          <tr class="catsHeadRow">
+            <th>No.</th>
+            <th>Cat Name</th>
+            <th>Cat Type</th>
+            <th>Lives left</th>
+            <th></th>
+            <th></th>
+          </tr>
+          <!--<tr class="catsDataRow">
+            One Example Cat
+            <td class="ordinal">1</td>
+            <td class="catName">Tom</td>
+            <td class="catType">Smotana Macka</td>
+            <td class="catLives">🐈🐈🐈🐈</td>
+            <td class="editThisCat"><a href="#">🖍</a></td>
+            <td class="deleteThisCat"><a href="#">❌</a></td>
+          </tr> -->
+          <tr class="catsDataRow catsAddNewCatRow">
+            <td class="addNewCat"><a href="#" class="addnew">➕</a></td>
+          </tr>
+        </table>
+      </div>
+      <div class="editArea hidden">
+        <span class="editAreaTitle">Edit or add new cat here</span>
+        <form>
+          <label for="catName">Cat Name:</label><br>
+          <input type="text" id="catName" name="catName"><br>
+          <label for="catType">Cat Type:</label><br>
+          <input type="text" id="catType" name="catType"><br>
+          <label for="livesLeft">Number of lives left:</label><br>
+          <input type="number" id="livesLeft" name="livesLeft"><br><br>
+          <input type="submit" id="submitBtn" value="Submiteros!" />
+        </form>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+
+</html>

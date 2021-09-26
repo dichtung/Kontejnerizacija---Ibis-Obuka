@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:soapui-project id="4d536832-4681-4b43-9950-6babace1152d" activeEnvironment="Default" name="Cats API" resourceRoot="" soapui-version="5.4.0" abortOnError="false" runType="SEQUENTIAL" xmlns:con="http://eviware.com/soapui/config"><con:settings/><con:interface xsi:type="con:RestService" id="3beb1cd8-6e2f-4a3b-8138-be0e5f5ef55d" wadlVersion="http://wadl.dev.java.net/2009/02" name="/api/v1" type="rest" basePath="" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:endpoints><con:endpoint>http://localhost:${#Project#Port}/api/v1</con:endpoint></con:endpoints><con:resource name="cats" path="/cats" id="9bfa57b1-947c-4420-88c8-de3ba20521ed"><con:settings/><con:parameters/><con:method name="GET /cats" id="2d070692-b4c3-4b5c-9a3c-12b7c0abf9b5" method="GET"><con:settings/><con:parameters/><con:representation type="RESPONSE"><con:mediaType>application/json; charset=utf-8</con:mediaType><con:status>200</con:status><con:params/><con:element xmlns:cats="http://localhost/cats">cats:Response</con:element></con:representation><con:representation type="FAULT"><con:mediaType>text/html; charset=utf-8</con:mediaType><con:status>404</con:status><con:params/><con:element>html</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>0</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType>text/html; charset=utf-8</con:mediaType><con:status>200</con:status><con:params/><con:element>html</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>0</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>0</con:status><con:params/><con:element>data</con:element></con:representation></con:method></con:resource><con:resource name="cat" path="/cat/{name}" id="12efa9f1-e849-4126-b487-300d8cec2085"><con:settings/><con:parameters><con:parameter><con:name>name</con:name><con:value/><con:style>TEMPLATE</con:style><con:default/></con:parameter></con:parameters><con:method name="GET /cat/:name" id="e8a696c7-46c1-4805-a43d-6727d46152c5" method="GET"><con:settings/><con:parameters/><con:representation type="FAULT"><con:mediaType>text/html; charset=utf-8</con:mediaType><con:status>404</con:status><con:params/><con:element>html</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType>application/json; charset=utf-8</con:mediaType><con:status>200</con:status><con:params/><con:element xmlns:cat="http://localhost/catCicko">cat:Response</con:element></con:representation></con:method><con:method name="DELETE /cat/:name" id="e8a696c7-46c1-4805-a43d-6727d46152c5" method="DELETE"><con:settings/><con:parameters/><con:representation type="FAULT"><con:mediaType>text/html; charset=utf-8</con:mediaType><con:status>404</con:status><con:params/><con:element>html</con:element></con:representation><con:representation type="REQUEST"><con:mediaType>application/x-www-form-urlencoded</con:mediaType><con:params/></con:representation><con:representation type="REQUEST"><con:mediaType>application/json</con:mediaType><con:params/></con:representation><con:representation type="RESPONSE"><con:mediaType>application/json; charset=utf-8</con:mediaType><con:status>200</con:status><con:params/><con:element>Response</con:element></con:representation></con:method><con:method name="PUT /cat/:name" id="4bebc9b2-89b0-42ad-a469-f8eef3c699ff" method="PUT"><con:settings/><con:parameters/><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>0</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="REQUEST"><con:mediaType>application/json</con:mediaType><con:params/></con:representation><con:representation type="RESPONSE"><con:mediaType>application/json; charset=utf-8</con:mediaType><con:status>200</con:status><con:params/><con:element>Response</con:element></con:representation></con:method></con:resource><con:resource name="cat" path="/cat" id="12efa9f1-e849-4126-b487-300d8cec2085"><con:settings/><con:parameters/><con:method name="POST /cat" id="e8a696c7-46c1-4805-a43d-6727d46152c5" method="POST"><con:settings/><con:parameters/><con:representation type="REQUEST"><con:mediaType>application/json</con:mediaType><con:params/></con:representation><con:representation type="FAULT"><con:mediaType>application/json; charset=utf-8</con:mediaType><con:status>500</con:status><con:params/></con:representation><con:representation type="RESPONSE"><con:mediaType>application/json; charset=utf-8</con:mediaType><con:status>200</con:status><con:params/><con:element xmlns:cat="http://localhost/api/v1/cat">cat:Response</con:element></con:representation><con:representation type="FAULT"><con:mediaType>text/html; charset=utf-8</con:mediaType><con:status>400</con:status><con:params/><con:element>html</con:element></con:representation></con:method></con:resource></con:interface><con:testSuite id="26fa0607-55ef-4361-b336-a012056f4eb9" name="Cats API Test Suite"><con:description>TestSuite generated for REST Service [http://localhost:5900]</con:description><con:settings/><con:runType>SEQUENTIAL</con:runType><con:testCase id="b66c996f-1d1a-498a-b685-0ee69d86df34" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="GET /cats" searchProperties="true"><con:description>TestCase generated for REST Resource [cats] located at [/cats]</con:description><con:settings/><con:testStep type="restrequest" name="GET /cats" id="d4aec935-e818-4474-bb5e-0a70eabe5fbe"><con:settings/><con:config service="/api/v1" resourcePath="/cats" methodName="GET /cats" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="GET /cats" id="d12d2b17-d3ff-4911-9b5e-bf4c70a31baf" mediaType="application/json"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>http://localhost:${#Project#Port}/api/v1</con:endpoint><con:request/><con:originalUri>http://localhost/cats</con:originalUri><con:assertion type="Valid HTTP Status Codes" id="d0aebf6f-b1f7-4873-84ca-429d5d100585" name="Valid HTTP Status Codes"><con:configuration><codes>200</codes></con:configuration></con:assertion><con:assertion type="JsonPath Count" id="695c3b8d-142e-4d06-aa81-ce2f1074ef02" name="Number of cats"><con:configuration><path>$</path><content>4</content><allowWildcards>false</allowWildcards><ignoreNamspaceDifferences>false</ignoreNamspaceDifferences><ignoreComments>false</ignoreComments></con:configuration></con:assertion><con:assertion type="JsonPath Match" id="2deff7a0-f5d6-4fcf-97ad-16b73cb9a47b" name="Cat #1: name"><con:configuration><path>$[0].name</path><content>Tom</content><allowWildcards>false</allowWildcards><ignoreNamspaceDifferences>false</ignoreNamspaceDifferences><ignoreComments>false</ignoreComments></con:configuration></con:assertion><con:assertion type="JsonPath Match" id="2deff7a0-f5d6-4fcf-97ad-16b73cb9a47b" name="Cat #1: type"><con:configuration><path>$[0].type</path><content>Smotana macka</content><allowWildcards>false</allowWildcards><ignoreNamspaceDifferences>false</ignoreNamspaceDifferences><ignoreComments>false</ignoreComments></con:configuration></con:assertion><con:assertion type="JsonPath Match" id="2deff7a0-f5d6-4fcf-97ad-16b73cb9a47b" name="Cat #1: # of lives left"><con:configuration><path>$[0].lives_left</path><content>4</content><allowWildcards>false</allowWildcards><ignoreNamspaceDifferences>false</ignoreNamspaceDifferences><ignoreComments>false</ignoreComments></con:configuration></con:assertion><con:assertion type="JsonPath Match" id="2deff7a0-f5d6-4fcf-97ad-16b73cb9a47b" name="Cat #2: name"><con:configuration><path>$[1].name</path><content>Fifi</content><allowWildcards>false</allowWildcards><ignoreNamspaceDifferences>false</ignoreNamspaceDifferences><ignoreComments>false</ignoreComments></con:configuration></con:assertion><con:assertion type="JsonPath Match" id="2deff7a0-f5d6-4fcf-97ad-16b73cb9a47b" name="Cat #2: type"><con:configuration><path>$[1].type</path><content>Gradska macka</content><allowWildcards>false</allowWildcards><ignoreNamspaceDifferences>false</ignoreNamspaceDifferences><ignoreComments>false</ignoreComments></con:configuration></con:assertion><con:assertion type="JsonPath Match" id="2deff7a0-f5d6-4fcf-97ad-16b73cb9a47b" name="Cat #2: # of lives left"><con:configuration><path>$[1].lives_left</path><content>7</content><allowWildcards>false</allowWildcards><ignoreNamspaceDifferences>false</ignoreNamspaceDifferences><ignoreComments>false</ignoreComments></con:configuration></con:assertion><con:assertion type="JsonPath Match" id="2deff7a0-f5d6-4fcf-97ad-16b73cb9a47b" name="Cat #3: name"><con:configuration><path>$[2].name</path><content>Cicko</content><allowWildcards>false</allowWildcards><ignoreNamspaceDifferences>false</ignoreNamspaceDifferences><ignoreComments>false</ignoreComments></con:configuration></con:assertion><con:assertion type="JsonPath Match" id="2deff7a0-f5d6-4fcf-97ad-16b73cb9a47b" name="Cat #3: type"><con:configuration><path>$[2].type</path><content>Seoska macka</content><allowWildcards>false</allowWildcards><ignoreNamspaceDifferences>false</ignoreNamspaceDifferences><ignoreComments>false</ignoreComments></con:configuration></con:assertion><con:assertion type="JsonPath Match" id="2deff7a0-f5d6-4fcf-97ad-16b73cb9a47b" name="Cat #3: # of lives left"><con:configuration><path>$[2].lives_left</path><content>4</content><allowWildcards>false</allowWildcards><ignoreNamspaceDifferences>false</ignoreNamspaceDifferences><ignoreComments>false</ignoreComments></con:configuration></con:assertion><con:assertion type="JsonPath Match" id="2deff7a0-f5d6-4fcf-97ad-16b73cb9a47b" name="Cat #4: name"><con:configuration><path>$[3].name</path><content>Mjaukalo</content><allowWildcards>false</allowWildcards><ignoreNamspaceDifferences>false</ignoreNamspaceDifferences><ignoreComments>false</ignoreComments></con:configuration></con:assertion><con:assertion type="JsonPath Match" id="2deff7a0-f5d6-4fcf-97ad-16b73cb9a47b" name="Cat #4: type"><con:configuration><path>$[3].type</path><content>Mlada macka</content><allowWildcards>false</allowWildcards><ignoreNamspaceDifferences>false</ignoreNamspaceDifferences><ignoreComments>false</ignoreComments></con:configuration></con:assertion><con:assertion type="JsonPath Match" id="2deff7a0-f5d6-4fcf-97ad-16b73cb9a47b" name="Cat #4: # of lives left"><con:configuration><path>$[3].lives_left</path><content>9</content><allowWildcards>false</allowWildcards><ignoreNamspaceDifferences>false</ignoreNamspaceDifferences><ignoreComments>false</ignoreComments></con:configuration></con:assertion><con:assertion type="JsonPath Match" id="a7ef0a93-62ae-4def-89ed-0fd2520dafb1" name="All Names"><con:configuration><path>$[*].name</path><content>[Tom, Fifi, Cicko, Mjaukalo]</content><allowWildcards>false</allowWildcards><ignoreNamspaceDifferences>false</ignoreNamspaceDifferences><ignoreComments>false</ignoreComments></con:configuration></con:assertion><con:credentials><con:username/><con:password xsi:nil="true"/><con:domain xsi:nil="true"/><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/><con:parameterOrder/></con:restRequest></con:config></con:testStep><con:properties/></con:testCase><con:testCase id="722890d9-226f-4943-8691-3aa874091d19" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="GET /cat/:name" searchProperties="true"><con:description>TestCase generated for REST Resource [cat] located at [/cat/{name}]</con:description><con:settings/><con:testStep type="groovy" name="DB Initialization" id="0e26143d-c0fb-4372-9d16-5e98dfa33a41"><con:settings/><con:config><script>import com.mongodb.*;
+import org.bson.*;
+
+// Define properties for newly created Cat
+def catName = 'Zika';
+def catType = 'Prebijena macka';
+def catLivesLeft = 1;
+
+// Set properties to testCase level
+testRunner.testCase.properties.catName.value = catName;
+testRunner.testCase.properties.catType.value = catType;
+testRunner.testCase.properties.catLivesLeft.value = catLivesLeft;
+
+// connect to DB
+mongo = new Mongo('localhost', 27017);
+db = mongo.getDB('zivotinje');
+macke = db.getCollection('macke');
+
+//Create a new Cat to 
+BasicDBObject newCat = new BasicDBObject();
+newCat.put("name", catName);
+newCat.put("type", catType);
+newCat.put("lives_left", catLivesLeft);
+macke.insert(newCat);
+
+assert macke.count() == 5;
+
+// Disconnect from Database
+mongo.close();
+return true;
+</script></con:config></con:testStep><con:testStep type="restrequest" name="GET /cat/:name" id="b5855e85-ee09-4efc-a062-55b097074412"><con:settings/><con:config service="/api/v1" resourcePath="/cat/{name}" methodName="GET /cat/:name" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="GET /cat/:name" id="e53567a5-d916-42f3-b793-6442fa851a4e" mediaType="application/json"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>http://localhost:${#Project#Port}/api/v1</con:endpoint><con:request/><con:originalUri>http://localhost/catCicko</con:originalUri><con:assertion type="Valid HTTP Status Codes" id="a0420d64-f4d1-48b9-8e81-207ab52ea593" name="Valid HTTP Status Codes"><con:configuration><codes>200</codes></con:configuration></con:assertion><con:assertion type="JsonPath Match" id="f3975c26-0140-4aed-919e-8d09254f6762" name="Name Match"><con:configuration><path>$.name</path><content>${#TestCase#catName}</content><allowWildcards>false</allowWildcards><ignoreNamspaceDifferences>false</ignoreNamspaceDifferences><ignoreComments>false</ignoreComments></con:configuration></con:assertion><con:assertion type="JsonPath Match" id="f3975c26-0140-4aed-919e-8d09254f6762" name="Type Match"><con:configuration><path>$.type</path><content>${#TestCase#catType}</content><allowWildcards>false</allowWildcards><ignoreNamspaceDifferences>false</ignoreNamspaceDifferences><ignoreComments>false</ignoreComments></con:configuration></con:assertion><con:assertion type="JsonPath Match" id="f3975c26-0140-4aed-919e-8d09254f6762" name="Lives Left Match"><con:configuration><path>$.lives_left</path><content>${#TestCase#catLivesLeft}</content><allowWildcards>false</allowWildcards><ignoreNamspaceDifferences>false</ignoreNamspaceDifferences><ignoreComments>false</ignoreComments></con:configuration></con:assertion><con:credentials><con:username/><con:password xsi:nil="true"/><con:domain xsi:nil="true"/><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters><entry key="name" value="${#TestCase#catName}" xmlns="http://eviware.com/soapui/config"/></con:parameters><con:parameterOrder><con:entry>name</con:entry></con:parameterOrder></con:restRequest></con:config></con:testStep><con:tearDownScript>import com.mongodb.*;
+import org.bson.*;
+
+def catName = testRunner.testCase.properties.catName.value.toString();
+def catType = testRunner.testCase.properties.catType.value;
+def catLivesLeft = testRunner.testCase.properties.catLivesLeft.value;
+// connect to DB
+mongo = new Mongo('localhost', 27017);
+try{
+db = mongo.getDB('zivotinje');
+macke = db.getCollection('macke');
+//filter
+DBObject catFilter = new BasicDBObject();
+catFilter.put("name",catName);
+macke.remove(catFilter);
+} catch(Exception e) {
+  log.error("Error while trying to delete data");
+} finally{
+ mongo.close();
+}
+
+// Clear all the properties
+testRunner.testCase.getProperties().each{ k, v -> v.setValue("") }
+return true;</con:tearDownScript><con:properties><con:property><con:name>catName</con:name><con:value/></con:property><con:property><con:name>catType</con:name><con:value/></con:property><con:property><con:name>catLivesLeft</con:name><con:value/></con:property></con:properties></con:testCase><con:testCase id="a982bfb6-7f22-44f2-bd56-c04e4ff07a16" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="POST /cat" searchProperties="true"><con:description>TestCase generated for REST Resource [cat] located at [/cat/{name}]</con:description><con:settings/><con:testStep type="groovy" name="Data Initialization" id="8a2b7a3b-f08e-49f4-a7fb-2244767bf33c"><con:settings/><con:config><script>import com.mongodb.*;
+import org.bson.*;
+
+// Define properties for newly created Cat
+def catName = 'Mjau mjau mackica';
+def catType = 'Burzujska macka';
+def catLivesLeft = 10;
+
+// Set properties to testCase level
+testRunner.testCase.properties.catName.value = catName;
+testRunner.testCase.properties.catType.value = catType;
+testRunner.testCase.properties.catLivesLeft.value = catLivesLeft;
+
+return true;
+</script></con:config></con:testStep><con:testStep type="restrequest" name="POST /cat" id="8c40e000-d3cb-4aa3-a8eb-55860967c423"><con:settings/><con:config service="/api/v1" methodName="POST /cat" resourcePath="/cat" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="POST /cat" id="7dda9f5f-1b5c-402c-88ca-de0dfe7105e8" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:${#Project#Port}/api/v1</con:endpoint><con:request>{
+	"name":"${#TestCase#catName}",
+	"type":"${#TestCase#catType}",
+	"lives_left": ${#TestCase#catLivesLeft}
+}
+</con:request><con:originalUri>http://localhost/api/v1/cat</con:originalUri><con:assertion type="Valid HTTP Status Codes" id="7d4fabeb-9db1-411c-9540-bc200cca4464" name="Valid HTTP Status Codes"><con:configuration><codes>200</codes></con:configuration></con:assertion><con:assertion type="JsonPath Match" id="59443ebb-d98b-4c7b-8287-37ede47fc65a" name="CatName Match"><con:configuration><path>$.name</path><content>${#TestCase#catName}</content><allowWildcards>false</allowWildcards><ignoreNamspaceDifferences>false</ignoreNamspaceDifferences><ignoreComments>false</ignoreComments></con:configuration></con:assertion><con:assertion type="JsonPath Match" id="59443ebb-d98b-4c7b-8287-37ede47fc65a" name="CatType Match"><con:configuration><path>$.type</path><content>${#TestCase#catType}</content><allowWildcards>false</allowWildcards><ignoreNamspaceDifferences>false</ignoreNamspaceDifferences><ignoreComments>false</ignoreComments></con:configuration></con:assertion><con:assertion type="JsonPath Match" id="59443ebb-d98b-4c7b-8287-37ede47fc65a" name="CatLivesLeft Match"><con:configuration><path>$.lives_left</path><content>${#TestCase#catLivesLeft}</content><allowWildcards>false</allowWildcards><ignoreNamspaceDifferences>false</ignoreNamspaceDifferences><ignoreComments>false</ignoreComments></con:configuration></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/></con:restRequest></con:config></con:testStep><con:testStep type="groovy" name="Assert DB populated" id="02962f49-3430-44da-be00-5d9095990db2"><con:settings/><con:config><script>import com.mongodb.*;
+
+// connect
+mongo = new Mongo('localhost', 27017);
+//mongo = new MongoClient('mongodb://@localhost:27017/admin');
+db = mongo.getDB('zivotinje');
+macke = db.getCollection('macke');
+assert macke.count() == 5;
+
+// disconnect from DB
+mongo.close();
+return true;
+</script></con:config></con:testStep><con:tearDownScript>import com.mongodb.*;
+import org.bson.*;
+
+def catName = testRunner.testCase.properties.catName.value.toString();
+def catType = testRunner.testCase.properties.catType.value;
+def catLivesLeft = testRunner.testCase.properties.catLivesLeft.value;
+// connect to DB
+mongo = new Mongo('localhost', 27017);
+try{
+db = mongo.getDB('zivotinje');
+macke = db.getCollection('macke');
+//filter
+DBObject catFilter = new BasicDBObject();
+catFilter.put("name",catName);
+macke.remove(catFilter);
+} catch(Exception e) {
+  log.error("Error while trying to delete data");
+} finally{
+ mongo.close();
+}
+
+// Clear all the properties
+testRunner.testCase.getProperties().each{ k, v -> v.setValue("") }
+return true;</con:tearDownScript><con:properties><con:property><con:name>catName</con:name><con:value/></con:property><con:property><con:name>catType</con:name><con:value/></con:property><con:property><con:name>catLivesLeft</con:name><con:value/></con:property></con:properties></con:testCase><con:testCase id="d587ae11-9e01-40e2-9e16-aa15bb0ab82f" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="DELETE /cat/:name" searchProperties="true"><con:description>TestCase generated for REST Resource [cat] located at [/cat/{name}]</con:description><con:settings/><con:testStep type="groovy" name="DB Initialization" id="1ef208e6-b790-47ca-942c-91312aa05f9e"><con:settings/><con:config><script>import com.mongodb.*;
+import org.bson.*;
+
+// Define properties for newly created Cat
+def catName = 'Zika';
+def catType = 'Prebijena macka';
+def catLivesLeft = 1;
+
+// Set properties to testCase level
+testRunner.testCase.properties.catName.value = catName;
+testRunner.testCase.properties.catType.value = catType;
+testRunner.testCase.properties.catLivesLeft.value = catLivesLeft;
+// connect to DB
+
+mongo = new Mongo('localhost', 27017);
+db = mongo.getDB('zivotinje');
+macke = db.getCollection('macke');
+
+//Create a new Cat to 
+BasicDBObject newCat = new BasicDBObject();
+newCat.put("name", catName);
+newCat.put("type", catType);
+newCat.put("lives_left", catLivesLeft);
+macke.insert(newCat);
+
+assert macke.count() == 5;
+// Disconnect from Database
+mongo.close();
+return true;
+</script></con:config></con:testStep><con:testStep type="restrequest" name="DELETE /cat/:name" id="d3974834-31c9-4f4d-af14-ac4e10b86210"><con:settings/><con:config service="/api/v1" resourcePath="/cat/{name}" methodName="DELETE /cat/:name" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="DELETE /cat/:name" id="e53567a5-d916-42f3-b793-6442fa851a4e" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>http://localhost:${#Project#Port}/api/v1</con:endpoint><con:request/><con:originalUri>http://localhost/catCicko</con:originalUri><con:assertion type="Valid HTTP Status Codes" id="d6c0fae2-2c35-46e8-834e-49da8f26bed6" name="Valid HTTP Status Codes"><con:configuration><codes>200</codes></con:configuration></con:assertion><con:assertion type="JsonPath Match" id="2bf33bf0-175a-4f54-86c2-b39d581f9e3d" name="Cat Name Match"><con:configuration><path>$.name</path><content>${#TestCase#catName}</content><allowWildcards>false</allowWildcards><ignoreNamspaceDifferences>false</ignoreNamspaceDifferences><ignoreComments>false</ignoreComments></con:configuration></con:assertion><con:assertion type="JsonPath Match" id="2bf33bf0-175a-4f54-86c2-b39d581f9e3d" name="Cat Type Match"><con:configuration><path>$.type</path><content>${#TestCase#catType}</content><allowWildcards>false</allowWildcards><ignoreNamspaceDifferences>false</ignoreNamspaceDifferences><ignoreComments>false</ignoreComments></con:configuration></con:assertion><con:assertion type="JsonPath Match" id="2bf33bf0-175a-4f54-86c2-b39d581f9e3d" name="Cat Lives Left Match"><con:configuration><path>$.lives_left</path><content>${#TestCase#catLivesLeft}</content><allowWildcards>false</allowWildcards><ignoreNamspaceDifferences>false</ignoreNamspaceDifferences><ignoreComments>false</ignoreComments></con:configuration></con:assertion><con:credentials><con:username/><con:password xsi:nil="true"/><con:domain xsi:nil="true"/><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters><entry key="name" value="${#TestCase#catName}" xmlns="http://eviware.com/soapui/config"/></con:parameters><con:parameterOrder><con:entry>name</con:entry></con:parameterOrder></con:restRequest></con:config></con:testStep><con:testStep type="groovy" name="Assert DB cleared" id="78dda51a-2557-4b40-a65a-bea959f5312d"><con:settings/><con:config><script>import com.mongodb.*;
+
+// connect
+mongo = new Mongo('localhost', 27017);
+//mongo = new MongoClient('mongodb://@localhost:27017/admin');
+db = mongo.getDB('zivotinje');
+macke = db.getCollection('macke');
+assert macke.count() == 4;
+
+// disconnect from DB
+mongo.close();
+return true;
+</script></con:config></con:testStep><con:tearDownScript>// Clear all the properties
+testRunner.testCase.getProperties().each{ k, v -> v.setValue("") }</con:tearDownScript><con:properties><con:property><con:name>catName</con:name><con:value/></con:property><con:property><con:name>catType</con:name><con:value/></con:property><con:property><con:name>catLivesLeft</con:name><con:value/></con:property></con:properties></con:testCase><con:testCase id="e56b28ca-8dc5-4893-9689-373bf663ae9c" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="PUT /cat/:name" searchProperties="true"><con:description>TestCase generated for REST Resource [cat] located at [/cat/{name}]</con:description><con:settings/><con:testStep type="groovy" name="DB Initialization" id="275caff7-d9a6-4051-8c23-0dfeae53858d"><con:settings/><con:config><script>import com.mongodb.*;
+import org.bson.*;
+
+// Define properties for newly created Cat
+def catName = 'Zika';
+def catType = 'Prebijena macka';
+def catLivesLeft = 1;
+def catLivesLeftNew = 9;
+
+// Set properties to testCase level
+testRunner.testCase.properties.catName.value = catName;
+testRunner.testCase.properties.catType.value = catType;
+testRunner.testCase.properties.catLivesLeft.value = catLivesLeft;
+testRunner.testCase.properties.catLivesLeftNew.value = catLivesLeftNew;
+// connect to DB
+
+mongo = new Mongo('localhost', 27017);
+db = mongo.getDB('zivotinje');
+macke = db.getCollection('macke');
+
+//Create a new Cat to 
+BasicDBObject newCat = new BasicDBObject();
+newCat.put("name", catName);
+newCat.put("type", catType);
+newCat.put("lives_left", catLivesLeft);
+macke.insert(newCat);
+
+assert macke.count() == 5;
+// Disconnect from Database
+mongo.close();
+return true;
+</script></con:config></con:testStep><con:testStep type="groovy" name="Assert DB populated" id="9fced92f-3fa7-451b-84c0-be9e32a32137"><con:settings/><con:config><script>import com.mongodb.*;
+
+// connect
+mongo = new Mongo('localhost', 27017);
+//mongo = new MongoClient('mongodb://@localhost:27017/admin');
+db = mongo.getDB('zivotinje');
+macke = db.getCollection('macke');
+assert macke.count() == 5;
+
+// disconnect from DB
+mongo.close();
+return true;
+</script></con:config></con:testStep><con:testStep type="restrequest" name="PUT /cat/:name" id="163657c3-1284-45b8-b73d-87c065c13e63"><con:settings/><con:config service="/api/v1" resourcePath="/cat/{name}" methodName="PUT /cat/:name" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="PUT /cat/:name" id="e53567a5-d916-42f3-b793-6442fa851a4e" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>http://localhost:${#Project#Port}/api/v1</con:endpoint><con:request>{
+	"name":"${#TestCase#catName}",
+	"type":"${#TestCase#catType}",
+	"lives_left": ${#TestCase#catLivesLeftNew}
+}</con:request><con:originalUri>http://localhost/catCicko</con:originalUri><con:assertion type="Valid HTTP Status Codes" id="2b7741ca-9553-4f85-b395-5e15beac57d8" name="Valid HTTP Status Codes"><con:configuration><codes>200</codes></con:configuration></con:assertion><con:assertion type="JsonPath Match" id="6e1091c0-035a-4998-a6c6-a70a77e904da" name="acknowledged Match"><con:configuration><path>$.acknowledged</path><content>true</content><allowWildcards>false</allowWildcards><ignoreNamspaceDifferences>false</ignoreNamspaceDifferences><ignoreComments>false</ignoreComments></con:configuration></con:assertion><con:assertion type="JsonPath Match" id="c8de9586-6bbe-46b6-8495-5542844c3859" name="modifiedCount Match"><con:configuration><path>$.modifiedCount</path><content>1</content><allowWildcards>false</allowWildcards><ignoreNamspaceDifferences>false</ignoreNamspaceDifferences><ignoreComments>false</ignoreComments></con:configuration></con:assertion><con:assertion type="JsonPath Match" id="c8de9586-6bbe-46b6-8495-5542844c3859" name="matchedCount Match"><con:configuration><path>$.matchedCount</path><content>1</content><allowWildcards>false</allowWildcards><ignoreNamspaceDifferences>false</ignoreNamspaceDifferences><ignoreComments>false</ignoreComments></con:configuration></con:assertion><con:assertion type="JsonPath Match" id="c8de9586-6bbe-46b6-8495-5542844c3859" name="upsertedCount Match"><con:configuration><path>$.upsertedCount</path><content>0</content><allowWildcards>false</allowWildcards><ignoreNamspaceDifferences>false</ignoreNamspaceDifferences><ignoreComments>false</ignoreComments></con:configuration></con:assertion><con:assertion type="JsonPath Match" id="c8de9586-6bbe-46b6-8495-5542844c3859" name="upsertedId Match"><con:configuration><path>$.upsertedId</path><content>null</content><allowWildcards>false</allowWildcards><ignoreNamspaceDifferences>false</ignoreNamspaceDifferences><ignoreComments>false</ignoreComments></con:configuration></con:assertion><con:credentials><con:username/><con:password xsi:nil="true"/><con:domain xsi:nil="true"/><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters><entry key="name" value="${#TestCase#catName}" xmlns="http://eviware.com/soapui/config"/></con:parameters><con:parameterOrder><con:entry>name</con:entry></con:parameterOrder></con:restRequest></con:config></con:testStep><con:testStep type="groovy" name="Assert DB entry changed" id="f78fdbe3-48b8-41ca-8b8b-b81c318f9f9e"><con:settings/><con:config><script>import com.mongodb.*;
+import org.bson.*;
+
+def catName = testRunner.testCase.properties.catName.value.toString();
+def catLivesLeftNew = testRunner.testCase.properties.catLivesLeftNew.value.toString();
+// connect
+mongo = new Mongo('localhost', 27017);
+try{
+	db = mongo.getDB('zivotinje');
+	macke = db.getCollection('macke');
+	//filter
+	DBObject catFilter = new BasicDBObject();
+	catFilter.put("name",catName);
+	DBObject foundCat = macke.findOne(catFilter);
+	assert foundCat.get("lives_left").toString() == catLivesLeftNew.toString();
+}
+catch (Exception e){
+	log.error("Error while retrieving data from Database");
+	log.error(e.getMessage().toString());
+}
+finally{
+	// disconnect from DB
+	mongo.close();
+}
+
+
+return true;
+</script></con:config></con:testStep><con:tearDownScript>import com.mongodb.*;
+import org.bson.*;
+
+def catName = testRunner.testCase.properties.catName.value.toString();
+// connect to DB
+mongo = new Mongo('localhost', 27017);
+try{
+db = mongo.getDB('zivotinje');
+macke = db.getCollection('macke');
+//filter
+DBObject catFilter = new BasicDBObject();
+catFilter.put("name",catName);
+macke.remove(catFilter);
+} catch(Exception e) {
+  log.error("Error while trying to delete data");
+} finally{
+ mongo.close();
+}
+
+// Clear all the properties
+testRunner.testCase.getProperties().each{ k, v -> v.setValue("") }
+return true;</con:tearDownScript><con:properties><con:property><con:name>catName</con:name><con:value/></con:property><con:property><con:name>catType</con:name><con:value/></con:property><con:property><con:name>catLivesLeft</con:name><con:value/></con:property><con:property><con:name>catLivesLeftNew</con:name><con:value/></con:property></con:properties></con:testCase><con:properties/></con:testSuite><con:properties><con:property><con:name>Port</con:name><con:value>5900</con:value></con:property></con:properties><con:wssContainer/><con:oAuth2ProfileContainer/><con:oAuth1ProfileContainer/><con:sensitiveInformation/></con:soapui-project>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:soapui-workspace name="Cats-API" soapui-version="5.4.0" projectRoot="${workspaceDir}" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings/>
+  <con:project name="Cats API">cats-api-soapui-project.xml</con:project>
+  <con:collectInfoForSupport>false</con:collectInfoForSupport>
+</con:soapui-workspace>

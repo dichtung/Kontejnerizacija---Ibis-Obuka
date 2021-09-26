@@ -1,0 +1,60 @@
+body {
+  margin: 0px;
+  padding: 0px;
+}
+
+.header {
+  margin: 0px;
+  padding: 0px;
+  height: 5rem;
+  font-size: 2rem;
+  text-align: center;
+  vertical-align: center;
+  background-color: #60c7fa;
+  padding-top: 2.5rem;
+  border-bottom: solid 4px;
+}
+
+.main-content {
+  display: flex;
+  justify-content: space-around;
+}
+
+.text {
+  padding: 10px 0 0 20px;
+  font-size: 1rem;
+}
+
+.catsTable {
+  padding-top: 30px;
+  width: 65vw;
+}
+
+.catsHeadRow th {
+  text-align: left;
+}
+
+a:link,
+a:visited {
+  text-decoration: none;
+}
+
+a:hover,
+a:active {
+  text-decoration: none;
+}
+
+.editArea {
+  border-left: 3px solid black;
+  padding-left: 20px;
+}
+
+.txtBoxDisabled {
+  pointer-events: none;
+  color: #aaa;
+  background: #f5f5f5;
+}
+
+.hidden {
+  opacity: 0;
+}

@@ -1,0 +1,23 @@
+{
+  "name": "cats-api",
+  "version": "1.0.0",
+  "description": "This is an Express.JS application that provides basic crud opperations for our cats application",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "cats",
+    "api",
+    "kittycats"
+  ],
+  "author": "nikola zarkovic",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "lodash": "^4.17.21",
+    "mongodb": "^4.1.1"
+  }
+}
