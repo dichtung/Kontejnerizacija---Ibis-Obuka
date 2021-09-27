@@ -1,0 +1,48 @@
+version: "3.9"
+services:
+  mongodb-baza:
+    build: "../3\ -\ Konfigurisanje baze podataka"
+    image: dichtung/catalyzator-mongo-db:1.0.0
+    container_name: "mongdb-$USERNAME"
+    volumes:
+      - podaci:/data/db
+      - konfiguracije:/data/configdb
+    ports:
+      - "27017:27017"
+    networks:
+      - ibisnetwork
+    hostname: catsdb.ibis-solutions.rs
+
+  middleware-catsapi:
+    build: "../4\ -\ Konfigurisanje middleware servisa/CatsAPI"
+    image: dichtung/catalyzator-api:1.0.0
+    container_name: "catsapi-$USERNAME"
+    hostname: catsapi.ibis-solutions.rs
+    networks:
+      - ibisnetwork
+    depends_on:
+      - "mongodb-baza"
+
+  frontend:
+    build: "../5\ -\ Konfigurisanje frontenda/public"
+    image: dichtung/catalyzator-fe:1.0.0
+    container_name: "frontend-$USERNAME"
+    networks:
+      - ibisnetwork
+    ports:
+      - "80:80"
+      - "5900:5900"
+    depends_on:
+      - "mongodb-baza"
+      - "middleware-catsapi"
+
+networks:
+  ibisnetwork:
+    external: true
+    name: ibismreza
+
+volumes:
+  podaci:
+    external: true
+  konfiguracije:
+    external: true
