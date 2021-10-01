@@ -11,7 +11,7 @@ COPY package*.json ./
 RUN npm install
 
 # Copy the working application code
-COPY . .
+COPY app.js .
 
 # Set the APP_PORT environment variable to custom port (i.e. 5900)
 ENV APP_PORT=5900
@@ -27,3 +27,4 @@ EXPOSE 5900
 
 # Run the nodejs server
 CMD [ "npm", "start" ]
+# CMD [ "node", "app.js"] - rade istu stvar, videti package.json scripts
