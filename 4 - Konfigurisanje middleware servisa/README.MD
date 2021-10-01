@@ -169,7 +169,7 @@ const mongoClient = new MongoClient(connectionStringURI, connectionOptions);
 Sve vrednosti koje postoje u okviru ovog koda mogu se setovati u okviru definicije _Dockerfile_-a **osim DB_PASSWORD**. Čuvanje passworda u okviru Environment varijabli predstavlja veliki security issue i veliki nou-nou bilo kada, bilo kako i bilo gde! Zato možemo da koristimo mehanizam koji se zove: Docker Secrets
 
 ## Docker Secrets
-Docker Secrets je mehanizam koji se koristi za injektovanje senzitivnih podataka u kontejner. Docker Secrets možemo da koristimo samo ukoliko koristimo _docker-compose_ tool ili _docker swarm_ orkestrator kontejnera. Ideja jeste da se na jednom mestu definiše tajni podatak, a da se posle po nekom simboličnom imenu referiramo na njega unutar kontejnera.
+Docker Secrets je mehanizam koji se koristi za injektovanje tajnih podataka u kontejner. Docker Secrets možemo da koristimo samo ukoliko koristimo _docker-compose_ tool ili _docker swarm_ orkestrator kontejnera. Ideja jeste da se na jednom mestu definiše tajni podatak, a da se posle po nekom simboličnom imenu referiramo na njega unutar kontejnera.
 
 Za potrebe ovog LAB-a, mi ćemo Password koristiti kao ENV varijablu, jer bilo koja alternativa iziskuje mnogo vremena (korišćenje custom password vault-ova i slično).
 

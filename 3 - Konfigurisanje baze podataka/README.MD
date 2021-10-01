@@ -202,7 +202,7 @@ Pokrenućemo novi kontejner ali ovoga puta umesto volumes-a koristićemo bind mo
 ```bash
  $ docker container run -v C:\\Users\\nikola.zarkovic\\Desktop\\ContainerData\\data:/data/db -v C:\\Users\\nikola.zarkovic\\Desktop\\ContainerData\\config:/data/configdb -d --name mycontainer -p 27018:27017 mongo:5.0.2
 ```
-> Duple \\ su potrebne da bi se escape-ovao znak "\"
+> Duple \\ su potrebne da bi se escape-ovao znak "\\"
 
 Prilikom pokretanja kontejnera pojavljuje se informacija da pokušavamo da Bind-ujemo Windows Host OS sa lokacijom na WSLv2 subsistemu i da takav način bind-ovanja može imati loše performanse. Ovakav način je sasvim OK za potrebe development-a.
 
