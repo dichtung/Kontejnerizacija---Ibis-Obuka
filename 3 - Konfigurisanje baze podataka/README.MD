@@ -191,12 +191,15 @@ Kreiraćemo bind koji će spojiti lokaciju na Desktop-u i lokaciju unutar mongod
  $ mkdir config
  $ mkdir data
 ```
-Proveriti da li se na Dekstopu napravio novi direktorijum 'ContainerData'. Otvoriti ga i iz address bar-a prekopirati apsolutnu putanju do ovog direktorijuma. Sačuvati je. U mom slučaju apsolutna putanja do direktorijuma je:
+Proveriti da li se na Dekstopu napravio novi direktorijum 'ContainerData'. Otvoriti ga i iz address bar-a prekopirati apsolutnu putanju do ovog direktorijuma. Sačuvati je.
+> Napomena: Duplirati \ pathove da bi se escape-ovali u okviru Moba shell-a
+
+U mom slučaju apsolutna putanja do direktorijuma je:
 ```text
-C:\Users\nikola.zarkovic\Desktop\ContainerData
+C:\\Users\\nikola.zarkovic\\Desktop\\ContainerData
 Putanje do respektivnih foldera 'config' i 'data' su:
-C:\Users\nikola.zarkovic\Desktop\ContainerData\config
-C:\Users\nikola.zarkovic\Desktop\ContainerData\data
+C:\\Users\\nikola.zarkovic\\Desktop\\ContainerData\\config
+C:\\Users\\nikola.zarkovic\\Desktop\\ContainerData\\data
 ```
 Pokrenućemo novi kontejner ali ovoga puta umesto volumes-a koristićemo bind mount sa apsolutnom putanjom Windows OS-a do našeg foldera. Pokrenemo kontejner kao: **Ne kopirati komandu jer putanje bind-a nisu iste!!!**
 ```bash
