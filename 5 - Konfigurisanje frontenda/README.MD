@@ -1,6 +1,6 @@
 # Podešavanje FrontEnd-a
 
-Kao FrontEnd u slučaju naše aplikacije, koristimo HTML5/CSS3/JS(ES6) tehnologije. WebServer će biti **NGiNX** WebServer / Reverse Proxy koji u ovom slučaju koristimo kao Docker Image i koji smo pominjali do sada veoma često.
+Kao FrontEnd u slučaju naše aplikacije, koristimo HTML5/CSS3/JS(ES6) tehnologije. WebServer će biti **NGiNX** WebServer / Direct Proxy koji u ovom slučaju koristimo kao Docker Image i koji smo pominjali do sada veoma često.
 
 Dokumentacija za NGiNX: [doc](http://nginx.org/en/docs/)
 
